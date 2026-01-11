@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dancing+Script:wght@400..700&family=Montserrat+Alternates:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    background: url(./asets/mypic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: bAnime 11s  infinite forwards;
+}
+
+.headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+}
+
+.headers .logo h1,h4 {
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+  font-weight:bolder;
+  font-style:italic;
+    color: rgb(2, 1, 13);
+}
+
+.headers .lists ul {
+    list-style: none;
+}
+.headers .lists ul li {
+    display: inline;
+    margin: 0 15px;
+}
+.headers .lists ul li a {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+.description {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    font-family: sans-serif;
+}
+
+.description span {
+    color: orangered;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.description h1 {
+    font-size: 55px;
+}
+.description p {
+    max-width: 100%;
+    width: 500px;
+    line-height: 1.5;
+}
+.image_slider {
+    width: 430px;
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-30%);
+    padding: 5px;
+    overflow: hidden;
+}
+
+.image_container {
+    display: flex;
+    gap: 20px;
+    animation: imganime 11s linear infinite;
+    transition: all 4s linear;
+}
+
+.image_container img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+@keyframes imganime {
+    0% {
+        transform: translateX(0);
+    }5% {
+        transform: translateX(0);
+    }10% {
+        transform: translateX(0);
+    }15% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-220px);
+    }25% {
+        transform: translateX(-220px);
+    }30% {
+        transform: translateX(-220px);
+    }35% {
+        transform: translateX(-220px);
+    }45% {
+        transform: translateX(-220px);
+    }
+    50% {
+        transform: translateX(-440px);
+    }55% {
+        transform: translateX(-440px);
+    }60% {
+        transform: translateX(-440px);
+    }65% {
+        transform: translateX(-440px);
+    }70% {
+        transform: translateX(-440px);
+    }
+    75% {
+        transform: translateX(-650px);
+    }80% {
+        transform: translateX(-650px);
+    }85% {
+        transform: translateX(-650px);
+    }90% {
+        transform: translateX(-650px);
+    }95% {
+        transform: translateX(-650px);
+    }100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bAnime {
+    0% {
+        background-image: url(./asets/mypic.jpg);
+    }5% {
+        background-image: url(./asets/mypic.jpg);
+    }10% {
+        background-image: url(./asets/mypic.jpg);
+    }15% {
+        background-image: url(./asets/mypic.jpg);
+    }
+    20% {
+        background-image: url(./asets/iceland.jpg);
+    }25% {
+        background-image: url(./asets/iceland.jpg);
+    }30% {
+        background-image: url(./asets/iceland.jpg);
+    }35% {
+        background-image: url(./asets/iceland.jpg);
+    }45% {
+        background-image: url(./asets/iceland.jpg);
+    }
+    50% {
+        background-image: url(./asets/pic311.jpeg);
+    }55% {
+        background-image: url(./asets/pic311.jpeg);
+    }60% {
+        background-image: url(./asets/pic311.jpeg);;
+    }65% {
+        background-image: url(./asets/pic311.jpeg);
+    }70% {
+        background-image: url(./asets/pic311.jpeg);
+    }
+    75% {
+        background-image: url(./asets/mountains-862870.jpg);
+    }80% {
+        background-image: url(./asets/mountains-862870.jpg);
+    }85% {
+        background-image: url(./asets/mountains-862870.jpg);
+    }90% {
+        background-image: url(./asets/mountains-862870.jpg);
+    }95% {
+        background-image: url(./asets/mountains-862870.jpg);
+    }100% {
+        background-image: url(./asets/mountains-862870.jpg);
+    }
+}
+
+#audioBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 10px 18px;
+    font-size: 14px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+   <audio id="bgAudio" autoplay muted loop>
+    <source src="Let Me Love You Instrumental.mp3" type="audio/mpeg">
+</audio>
+
+
+    <div class="container">
+    <div class="overlay"></div>
+    <!-- <div class="bg_image"><img src="white horse.jpg" alt=""></div> -->
+    <div class="headers">
+        <div class="logo"><h1>MelodySlider</h1><h4>Feel the Rhythm. See the Story!</h4></div>
+        <div class="lists">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="description">
+        <span>Welcome To</span>
+        <h2 style="font-weight: bold;color: rgb(1, 10, 2);">MELODYSLIDER</h2>
+        <p>MelodySlider blends visuals and sound to create an emotional storytelling experience. As images flow automatically, background music sets the tone—transforming every slide into a moment worth feeling.
+
+            This project is crafted to explore the harmony between motion, music, and design, delivering a calm yet captivating user experience.</p>
+    </div>
+    <div class="image_slider">
+        <div class="image_container">
+            <img src="./asets/mypic.jpg" alt="">
+            <img src="./asets/iceland.jpg" alt="">
+            <img src="./asets/pic3.jpeg" alt="">
+            <img src="./asets/mountains-862870.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<button id="audioBtn">🔊 Sound On</button>
+<script>
+    const audio = document.getElementById("bgAudio");
+    const btn = document.getElementById("audioBtn");
+
+    audio.volume = 0;
+
+    // Fade-in effect
+    function fadeInAudio() {
+        let volume = 0;
+        const fade = setInterval(() => {
+            if (volume < 0.6) {
+                volume += 0.02;
+                audio.volume = volume;
+            } else {
+                clearInterval(fade);
+            }
+        }, 200);
+    }
+
+    // Enable sound after first user interaction
+    document.addEventListener("click", () => {
+        audio.muted = false;
+        audio.play();
+        fadeInAudio();
+    }, { once: true });
+
+    // Mute / Unmute button
+    btn.addEventListener("click", () => {
+        audio.muted = !audio.muted;
+        btn.textContent = audio.muted ? "🔇 Sound Off" : "🔊 Sound On";
+    });
+</script>
+
+</body>
+</html>
