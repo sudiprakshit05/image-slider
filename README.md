@@ -54,8 +54,7 @@ MelodySlider/
 ---
 
 ## 📸 Preview
-
-> Add a screenshot or GIF of your project here  
+ 
 ```md
 ![MelodySlider Preview](./preview.png)
 
